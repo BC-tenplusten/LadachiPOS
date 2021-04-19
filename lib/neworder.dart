@@ -32,7 +32,6 @@ class newOrderState extends State<newOrder> {
               },
             ),
             TextFormField(
-              controller: _controller,
               decoration: const InputDecoration(
                 icon: const Icon(Icons.date_range),
                 hintText: 'Enter date',
@@ -46,7 +45,6 @@ class newOrderState extends State<newOrder> {
               },
             ),
             TextFormField(
-              controller: _controller,
               decoration: const InputDecoration(
                 icon: const Icon(Icons.phone),
                 hintText: 'Enter phone',
@@ -60,7 +58,6 @@ class newOrderState extends State<newOrder> {
               },
             ),
             TextFormField(
-              controller: _controller,
               decoration: const InputDecoration(
                 icon: const Icon(Icons.house),
                 hintText: 'Enter Address',
@@ -74,7 +71,6 @@ class newOrderState extends State<newOrder> {
               },
             ),
             TextFormField(
-              controller: _controller,
               decoration: const InputDecoration(
                 icon: const Icon(Icons.delivery_dining),
                 hintText: 'Enter Delivery Date',
