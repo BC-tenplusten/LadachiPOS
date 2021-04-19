@@ -17,8 +17,11 @@ class neworderpage2 extends StatelessWidget {
 
 class orderdetails extends StatelessWidget {
   final TextEditingController _controller = new TextEditingController();
-  final leftcolumn = new Container(
-    child: new Row(
+  final leftcolumn = new Padding(
+    padding: EdgeInsets.all(24.0),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Expanded(child: TextField()),
       ],
