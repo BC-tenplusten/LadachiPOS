@@ -17,15 +17,12 @@ class neworderpage2 extends StatelessWidget {
 
 class orderdetails extends StatelessWidget {
   final TextEditingController _controller = new TextEditingController();
-  final leftcolumn = new Column(
-    children: <Widget>[
-      new Flexible(
-        child: TextField(
-          keyboardType: TextInputType.multiline,
-          maxLines: 10,
-        ),
-      ),
-    ],
+  final leftcolumn = new Container(
+    child: new Row(
+      children: <Widget>[
+        Expanded(child: TextField()),
+      ],
+    ),
   );
 
   // final midcolumn = new Container(
@@ -52,12 +49,12 @@ class orderdetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: new Row(
-      children: <Widget>[
-        leftcolumn,
-        // midcolumn,
-        // rightcolumn,
-      ],
-    ));
+      child: new Container(
+          child: new Row(
+        children: <Widget>[
+          leftcolumn,
+        ],
+      )),
+    );
   }
 }

@@ -32,9 +32,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          centerTitle: true,
-          title: const Text('Ladachi SDN BHD'),
-        ),
+            centerTitle: true,
+            title: Text('Ladachi SDN BHD',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 30.0))),
         body: Padding(
             padding: const EdgeInsets.only(top: 12),
             child: StaggeredGridView.count(
