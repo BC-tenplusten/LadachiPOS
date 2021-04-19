@@ -10,16 +10,16 @@ class neworderpage2 extends StatelessWidget {
         centerTitle: true,
         title: const Text('Ladachi SDN BHD'),
       ),
-      body: new orderdetails(),
+      body: orderdetails(),
     );
   }
 }
 
 class orderdetails extends StatelessWidget {
   final TextEditingController _controller = new TextEditingController();
-  final leftcolumn = new Column(
+  final leftcolumn = Column(
     children: <Widget>[
-      new Flexible(
+      Expanded(
         child: TextField(
           keyboardType: TextInputType.multiline,
           maxLines: 10,
@@ -52,12 +52,14 @@ class orderdetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: new Row(
-      children: <Widget>[
-        leftcolumn,
-        // midcolumn,
-        // rightcolumn,
-      ],
+        child: Expanded(
+      child: Row(
+        children: <Widget>[
+          Expanded(child: leftcolumn),
+          // midcolumn,
+          // rightcolumn,
+        ],
+      ),
     ));
   }
 }
