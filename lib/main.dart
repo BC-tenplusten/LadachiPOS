@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-// import 'package:ladachipos/dashboard.dart';
+import 'package:ladachipos/dashboard.dart';
+import 'package:ladachipos/dashboard.dart';
 import 'package:ladachipos/homepage.dart';
+import 'package:ladachipos/neworder.dart';
+import 'package:ladachipos/neworderdetails.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,7 +17,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.grey,
       ),
-      home: HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/dashboard': (context) => Dashboard(),
+        '/neworder': (context) => newOrder(),
+        '/orderdetails': (context) => neworderpage2(),
+      },
     );
   }
 }
