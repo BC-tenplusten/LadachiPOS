@@ -5,12 +5,23 @@ class neworderpage2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Ladachi SDN BHD'),
+    return MaterialApp(
+      home: neworderpage2screen(),
+    );
+  }
+}
+
+class neworderpage2screen extends StatelessWidget {
+  const neworderpage2screen({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text("Chat Item"),
+        backgroundColor: Colors.lightGreen,
       ),
-      body: new orderdetails(),
+      body: orderdetails(),
     );
   }
 }
@@ -23,7 +34,17 @@ class orderdetails extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Expanded(child: TextField()),
+        Row(children: <Widget>[
+          Expanded(
+            child: TextFormField(
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Password',
+              ),
+            ),
+          )
+        ])
       ],
     ),
   );
@@ -51,13 +72,12 @@ class orderdetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: new Container(
-          child: new Row(
-        children: <Widget>[
-          leftcolumn,
-        ],
-      )),
-    );
+    return new Scaffold(
+        // body: new Container(
+        //   child: new Column(
+        //     children: <Widget>[leftcolumn],
+        //   ),
+        // ),
+        );
   }
 }
